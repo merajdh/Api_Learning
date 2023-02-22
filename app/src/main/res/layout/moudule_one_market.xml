@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorPrimary"
+    android:layout_height="100dp">
+
+    <ImageView
+
+        android:layout_marginStart="12dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_news"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:lineSpacingExtra="1dp"
+        android:padding="10dp"
+        android:text="this is a new from api for users , this is a new from api for users , this is a new from api for users"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>
