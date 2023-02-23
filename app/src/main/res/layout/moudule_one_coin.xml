@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?attr/colorPrimary"
+    android:paddingBottom="8dp"
+    android:layout_margin="4dp"
+    android:layout_height="320dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="$30.22"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_up"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:tint="@color/green" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="-$4.2"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+8.2%"
+        android:textColor="@color/green"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+
+    <RadioGroup
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:text="12 H"
+            android:textColor="@drawable/select_radio_text"
+            android:gravity="center"
+            android:paddingEnd="4dp"
+            android:button="@null"
+            android:paddingStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="1 D"
+            android:textColor="@drawable/select_radio_text"
+            android:gravity="center"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="3 D"
+            android:textColor="@drawable/select_radio_text"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="1 w"
+            android:textColor="@drawable/select_radio_text"
+            android:layout_gravity="center"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="1 M"
+            android:textColor="@drawable/select_radio_text"
+            android:gravity="center"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="3 M"
+            android:textColor="@drawable/select_radio_text"
+            android:gravity="center"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="All"
+            android:textColor="@drawable/select_radio_text"
+            android:gravity="center"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_radio"
+            android:checked="false" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_news" />
-                            <entry key="sourceFile" value="C:\Users\Meraj\Downloads\noun-news-3670079.svg" />
+                            <entry key="outputName" value="ic_down" />
+                            <entry key="sourceFile" value="C:\Users\Meraj\Downloads\down-arrow.svg" />
                           </map>
                         </option>
                       </PersistentState>

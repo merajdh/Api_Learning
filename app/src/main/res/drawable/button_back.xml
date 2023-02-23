@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <ripple android:color="?android:attr/colorControlHighlight" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -<item android:id="@android:id/mask">
+
+
+    -<shape android:shape="rectangle">
+
+    <solid android:color="@color/colorPrimaryDusk"/>
+
+    <corners android:radius="12dp"/>
+
+</shape>
+
+</item>
+
+
+    -<item>
+
+
+    -<shape android:shape="rectangle">
+
+    <gradient android:type="linear" android:startColor="@color/blue_second" android:endColor="@color/dark_gray" android:angle="90"/>
+
+    <corners android:radius="16dp"/>
+
+</shape>
+
+</item>
+
+</ripple>
