@@ -8,7 +8,8 @@
 
     <include layout="@layout/moudule_toolbar" />
 
-    <include layout="@layout/moudule_one_market"/>
+    <include layout="@layout/moudule_one_market"
+        android:id="@+id/moudule_one_market"/>
 
     <include layout="@layout/moudule_two_market"/>
 </LinearLayout>
