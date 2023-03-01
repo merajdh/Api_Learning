@@ -1,6 +1,7 @@
 package com.example.myapplicationtest.ApiManager
 
 import com.example.myapplicationtest.Model.News
+import com.example.myapplicationtest.Model.TopCoin
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -18,5 +19,5 @@ interface apiService {
     fun getTopCoin(
         @Query("tsym") to_symbol : String = "USD",
         @Query("limit") limit_data : Int = 10
-    )
+    ):Call<TopCoin>
 }

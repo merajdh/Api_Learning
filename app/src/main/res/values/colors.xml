@@ -5,6 +5,7 @@
     <color name="blue_second">#4a5ca2</color>
     <color name="blue_main">#151B25</color>
     <color name="green">#379237</color>
+    <color name="red">#810000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

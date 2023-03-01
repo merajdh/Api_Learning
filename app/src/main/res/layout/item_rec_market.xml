@@ -18,7 +18,7 @@
 
     <TextView
         android:textStyle="bold"
-        android:id="@+id/textView"
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -28,26 +28,16 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <TextView
-        android:text="IRR"
-        android:textSize="14sp"
-        android:textColor="@color/gray"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="coinBase"
+        android:id="@+id/txt_change"
         android:textColor="@color/gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/txt_name" />
 
     <LinearLayout
         android:layout_marginEnd="20dp"
@@ -62,7 +52,7 @@
         <TextView
             android:layout_gravity="end"
             android:textStyle="bold"
-            android:id="@+id/textView2"
+            android:id="@+id/txt_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$320,200"
@@ -71,6 +61,7 @@
 
 
         <TextView
+            android:id="@+id/txt_cap"
             android:layout_gravity="end"
             android:layout_marginTop="4dp"
             android:layout_width="wrap_content"
@@ -78,9 +69,9 @@
             android:text="2.4 million"
             android:textColor="@color/gray"
             android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_price"
+            app:layout_constraintStart_toStartOf="@+id/txt_price"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price" />
 
 
     </LinearLayout>

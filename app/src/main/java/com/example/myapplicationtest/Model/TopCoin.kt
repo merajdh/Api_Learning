@@ -1,7 +1,9 @@
 package com.example.myapplicationtest.Model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class TopCoin(
     @SerializedName("Data")
@@ -19,6 +21,7 @@ data class TopCoin(
     @SerializedName("Type")
     val type: Int
 ) {
+    @Parcelize
     data class Data(
         @SerializedName("CoinInfo")
         val coinInfo: CoinInfo,
@@ -26,7 +29,8 @@ data class TopCoin(
         val dISPLAY: DISPLAY,
         @SerializedName("RAW")
         val rAW: RAW
-    ) {
+    ) :Parcelable{
+        @Parcelize
         data class CoinInfo(
             @SerializedName("Algorithm")
             val algorithm: String,
@@ -36,8 +40,6 @@ data class TopCoin(
             val blockNumber: Int,
             @SerializedName("BlockReward")
             val blockReward: Double,
-            @SerializedName("BlockTime")
-            val blockTime: Double,
             @SerializedName("DocumentType")
             val documentType: String,
             @SerializedName("FullName")
@@ -52,8 +54,6 @@ data class TopCoin(
             val maxSupply: Double,
             @SerializedName("Name")
             val name: String,
-            @SerializedName("NetHashesPerSecond")
-            val netHashesPerSecond: Long,
             @SerializedName("ProofType")
             val proofType: String,
             @SerializedName("Rating")
@@ -62,11 +62,13 @@ data class TopCoin(
             val type: Int,
             @SerializedName("Url")
             val url: String
-        ) {
+        ) :Parcelable{
+            @Parcelize
             data class Rating(
                 @SerializedName("Weiss")
                 val weiss: Weiss
-            ) {
+            ) :Parcelable {
+                @Parcelize
                 data class Weiss(
                     @SerializedName("MarketPerformanceRating")
                     val marketPerformanceRating: String,
@@ -74,14 +76,16 @@ data class TopCoin(
                     val rating: String,
                     @SerializedName("TechnologyAdoptionRating")
                     val technologyAdoptionRating: String
-                )
+                ) : Parcelable
             }
         }
 
+        @Parcelize
         data class DISPLAY(
             @SerializedName("USD")
             val uSD: USD
-        ) {
+        ) :Parcelable{
+            @Parcelize
             data class USD(
                 @SerializedName("CHANGE24HOUR")
                 val cHANGE24HOUR: String,
@@ -171,13 +175,14 @@ data class TopCoin(
                 val vOLUMEHOUR: String,
                 @SerializedName("VOLUMEHOURTO")
                 val vOLUMEHOURTO: String
-            )
+            ):Parcelable
         }
-
+        @Parcelize
         data class RAW(
             @SerializedName("USD")
             val uSD: USD
-        ) {
+        ) :Parcelable{
+            @Parcelize
             data class USD(
                 @SerializedName("CHANGE24HOUR")
                 val cHANGE24HOUR: Double,
@@ -273,7 +278,7 @@ data class TopCoin(
                 val vOLUMEHOUR: Double,
                 @SerializedName("VOLUMEHOURTO")
                 val vOLUMEHOURTO: Double
-            )
+            ):Parcelable
         }
     }
 

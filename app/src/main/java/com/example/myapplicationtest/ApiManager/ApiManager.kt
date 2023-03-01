@@ -1,6 +1,7 @@
 package com.example.myapplicationtest.ApiManager
 
 import com.example.myapplicationtest.Model.News
+import com.example.myapplicationtest.Model.TopCoin
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -43,8 +44,25 @@ class ApiManager  {
 
     }
 
+    fun getCoin(apiCallback: ApiCallback<List<TopCoin.Data>>)  {
+        ApiService.getTopCoin().enqueue(object  : Callback<TopCoin>{
+            override fun onResponse(call: Call<TopCoin>, response: Response<TopCoin>) {
+
+                val data = response.body()!!
+                apiCallback.onSuccess(data.data)
+
+            }
+
+            override fun onFailure(call: Call<TopCoin>, t: Throwable) {
+                apiCallback.onError(t.message!!)
+            }
+
+        })
+
+    }
+
     interface ApiCallback<T>{
-        fun onSuccess(data: ArrayList<Pair<String, String>>)
+        fun onSuccess(datas : T)
         fun onError(errorManager: String)
     }
 

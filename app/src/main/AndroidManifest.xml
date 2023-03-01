@@ -16,8 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationTest"
         tools:targetApi="31">
+
+        <activity android:name=".Ui.CoinActivity.CoinActivity"
+            android:exported="true">
+
+        </activity>
         <activity
-            android:name=".MainActivityMarket"
+            android:name=".Ui.market.MainActivityMarket"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
