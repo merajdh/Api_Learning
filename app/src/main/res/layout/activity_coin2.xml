@@ -10,10 +10,13 @@
         android:layout_height="match_parent"
         android:background="?attr/colorPrimary"
         android:orientation="vertical">
+        <include layout="@layout/moudule_toolbar"
+            android:id="@+id/moudule_toolbar"/>
 
         <include layout="@layout/moudule_one_coin" />
 
-        <include layout="@layout/moudule_two_coin" />
+        <include layout="@layout/moudule_two_coin"
+            android:id="@+id/moudule_two_coin"/>
 
         <include layout="@layout/moudule_three_coin" />
 

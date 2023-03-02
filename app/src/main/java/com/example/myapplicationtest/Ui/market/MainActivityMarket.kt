@@ -4,6 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.animation.AlphaAnimation
 import android.widget.Toast
@@ -11,18 +13,33 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplicationtest.ApiManager.ApiManager
 import com.example.myapplicationtest.Model.TopCoin
-import com.example.myapplicationtest.R
-import com.example.myapplicationtest.Ui.CoinActivity.CoinActivity
-import com.example.myapplicationtest.databinding.FragmentMarketBinding
+import com.example.myapplicationtest.Ui.Coin.Coin_Activity
+import com.example.myapplicationtest.databinding.ActivityMarketBinding
 
 class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
-    lateinit var binding: FragmentMarketBinding
+    lateinit var binding: ActivityMarketBinding
     val apimanager = ApiManager()
     lateinit var dataNews : ArrayList< Pair < String , String> >
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentMarketBinding.inflate(layoutInflater)
+        binding = ActivityMarketBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.refresh.setOnRefreshListener {
+
+            InitUi()
+
+            Handler (Looper.getMainLooper()).postDelayed({
+                binding.refresh.isRefreshing = false
+
+            },1000)
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         InitUi()
 
     }
@@ -101,7 +118,7 @@ class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
     }
 
     override fun onItemClick(dataCoin: TopCoin.Data) {
-        val intent = Intent(this , CoinActivity::class.java)
+        val intent = Intent(this@MainActivityMarket , Coin_Activity::class.java)
         intent.putExtra("dataSend" , dataCoin)
         startActivity(intent)
     }
