@@ -12,14 +12,18 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplicationtest.ApiManager.ApiManager
+import com.example.myapplicationtest.Model.About
+import com.example.myapplicationtest.Model.ItemAbout
 import com.example.myapplicationtest.Model.TopCoin
 import com.example.myapplicationtest.Ui.Coin.Coin_Activity
 import com.example.myapplicationtest.databinding.ActivityMarketBinding
+import com.google.gson.Gson
 
 class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
     lateinit var binding: ActivityMarketBinding
     val apimanager = ApiManager()
     lateinit var dataNews : ArrayList< Pair < String , String> >
+    lateinit var  aboutMap : MutableMap<String , ItemAbout>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMarketBinding.inflate(layoutInflater)
@@ -46,9 +50,31 @@ class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
 
     private fun InitUi() {
 
+        getAboutData()
         getNews()
         getTopCoins()
 
+    }
+
+    private fun getAboutData() {
+
+        val dataString = applicationContext.assets.open("currencyinfo.json").bufferedReader().use {
+            it.readText()
+        }
+        val gson = Gson()
+        val dataAll = gson.fromJson(dataString , About::class.java)
+
+         aboutMap = mutableMapOf<String , ItemAbout>()
+
+        dataAll.forEach{
+            aboutMap[it.currencyName] = ItemAbout(
+                it.info.web,
+                it.info.twt,
+                it.info.reddit,
+                it.info.desc,
+                it.info.github,
+            )
+        }
     }
 
 
@@ -119,7 +145,11 @@ class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
 
     override fun onItemClick(dataCoin: TopCoin.Data) {
         val intent = Intent(this@MainActivityMarket , Coin_Activity::class.java)
-        intent.putExtra("dataSend" , dataCoin)
+        val bundle = Bundle()
+        bundle.putParcelable("bundle1",dataCoin)
+        bundle.putParcelable("bundle2", aboutMap[dataCoin.coinInfo.name]!!)
+
+        intent.putExtra("bundle" , bundle)
         startActivity(intent)
     }
 

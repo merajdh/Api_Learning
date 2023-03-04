@@ -18,7 +18,8 @@
         <include layout="@layout/moudule_two_coin"
             android:id="@+id/moudule_two_coin"/>
 
-        <include layout="@layout/moudule_three_coin" />
+        <include layout="@layout/moudule_three_coin"
+            android:id="@+id/oudule_three_coin"/>
 
 
     </LinearLayout>
