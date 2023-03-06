@@ -62,4 +62,7 @@ dependencies {
     //refresh
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
+    //chart spark
+    implementation 'com.robinhood.spark:spark:1.2.0'
+
 }

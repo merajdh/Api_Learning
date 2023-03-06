@@ -13,7 +13,8 @@
         <include layout="@layout/moudule_toolbar"
             android:id="@+id/moudule_toolbar"/>
 
-        <include layout="@layout/moudule_one_coin" />
+        <include layout="@layout/moudule_one_coin"
+            android:id="@+id/moudule_one_coin"/>
 
         <include layout="@layout/moudule_two_coin"
             android:id="@+id/moudule_two_coin"/>

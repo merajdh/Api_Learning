@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/drawable/button_back.xml" value="0.1245" />
+        <entry key="..\:/prozheh/ApiLearning/app/src/main/res/drawable/select_radio.xml" value="0.1915" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/drawable/select_radio_text.xml" value="0.2335" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/drawable/shape_select_radio.xml" value="0.2335" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/activity_coin.xml" value="0.1" />
@@ -15,6 +16,7 @@
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/fragment_market.xml" value="0.15" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/item_rec_market.xml" value="0.33" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/moudule_one_chart.xml" value="0.5" />
+        <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/moudule_one_coin.xml" value="0.33" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/moudule_one_market.xml" value="0.25" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/moudule_one_toolbar.xml" value="0.23541666666666666" />
         <entry key="..\:/prozheh/ApiLearning/app/src/main/res/layout/moudule_three_coin.xml" value="0.33" />

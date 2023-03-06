@@ -131,6 +131,7 @@ class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
         })
     }
 
+
     private fun showDataRec(data : List<TopCoin.Data>){
 
         val  marketAdapter =MareketAdapter(ArrayList(data)  , this )
@@ -147,7 +148,7 @@ class MainActivityMarket : AppCompatActivity() , MareketAdapter.onClick{
         val intent = Intent(this@MainActivityMarket , Coin_Activity::class.java)
         val bundle = Bundle()
         bundle.putParcelable("bundle1",dataCoin)
-        bundle.putParcelable("bundle2", aboutMap[dataCoin.coinInfo.name]!!)
+        bundle.putParcelable("bundle2", aboutMap[dataCoin.coinInfo.name])
 
         intent.putExtra("bundle" , bundle)
         startActivity(intent)

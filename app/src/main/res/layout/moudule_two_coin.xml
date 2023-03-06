@@ -205,15 +205,14 @@
 
             <TextView
                 android:id="@+id/txt_supply"
-                style="@style/CoinBitText.Body1"
+                style="@style/CoinBitText.Body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.2"
                 android:textColor="@color/white"
                 android:layout_marginTop="22dp"
-
-                android:textSize="18sp"
                 android:textStyle="bold"
+                android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="@+id/textView17"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
